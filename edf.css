@@ -1,0 +1,640 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body, html, .sub-header, section{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(edimgs/univ-building.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a img{
+    width: 15px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color : white;
+    text-decoration :none;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+
+
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width : 90%;
+    color: white;
+    position: absolute;
+    top :50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size:13px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s linear;
+}
+
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s linear;
+}
+
+.mn{
+    width: 35px;
+    display: none; 
+}
+
+@media(max-width: 500px){
+    .nav a img{
+        padding: .5rem;
+        width: 50px;
+    }
+}
+
+@media(max-width: 800px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s ease;
+    }
+    nav .mn{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+}
+
+
+
+
+.courses-we-offer{
+    margin: 5rem 0;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+    margin-top: 5rem;
+}
+
+.courses-we-offer h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.courses-we-offer p{
+    padding: 10px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #777;
+}
+
+
+.c-cols {
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+
+.b-box{
+    flex-basis: 31%;
+    background: #fff3f3;
+    padding: 20px 12px;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.c-cols .b-box h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px  0;
+}
+
+.b-box:hover{
+    box-shadow:0 0 20px 0 rgba(0, 0, 0,0.2);
+}
+
+
+@media(max-width: 800px){
+    .c-cols{
+        flex-direction: column;
+    }
+}
+
+
+
+
+.campus{
+    text-align: center;
+    margin-top: 5rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.campus h1{
+    font-size: 36px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.campus p{
+    font-weight: 500;
+}
+
+.campus .cmp-row{
+    margin: 3rem 0 ;
+    display: flex;
+}
+
+.campus .cmp-row .cmp-imgs {
+    position: relative;
+    width: 80vw;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: .7rem;
+    margin: 1rem;
+}
+
+.campus .cmp-row .cmp-imgs img{
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.campus .cmp-row .cmp-imgs .fnc-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.campus .cmp-row .cmp-imgs:hover .fnc-img{
+    transition: .5s;
+    transform: translateY(0%);
+    background: rgba(253, 0, 0, 0.7);
+}
+
+@media(max-width: 800px){
+    .campus{
+        margin: 5rem auto;
+    }
+    .campus .cmp-row{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+}
+
+
+
+
+
+.facilities{
+    text-align: center;
+    margin-top: 5rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+}
+.facilities h1{
+    font-size: 36px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.facilities p{
+    font-weight: 500;
+}
+.facilities .fas-row{
+    text-align: left;
+    margin: 3rem 0 ;
+    display: flex;
+}
+.facilities .fas-row .fas-imgs {
+    position: relative;
+    width: 80vw;
+    margin-bottom: 30px;
+    overflow: hidden;
+    margin: 2rem 1rem;
+}
+.facilities .fas-row .fas-imgs img{
+    width: 100%;
+    height: 60%;
+    border-radius: .5rem;
+}
+.facilities .fas-row .fas-imgs .fas-txt h3{
+    margin: 1rem auto;
+}
+
+@media(max-width: 800px){
+    .facilities{
+        margin: 5rem auto;
+    }
+    .facilities .fas-row{
+    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+}
+
+
+
+
+.tesmonials{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+}
+.tesmonials h1{
+    font-size: 36px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.tesmonials p{
+    font-weight: 500;
+}
+.tesmonials .tes-row{
+    text-align: left;
+    margin: 3rem ;
+    display: flex;
+    gap: 2rem;
+
+}
+
+.tesmonials .tes-row .tes-imgs{
+    padding: 1rem 2rem;
+    background: #fff3f3 ;
+    display: flex;
+    gap: 1rem;
+    width: 70vw;
+    border-radius: .7rem;
+}
+.tesmonials .tes-row .tes-imgs img{
+    width:3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.tesmonials .tes-row .tes-imgs h4{
+    margin: 2rem 0;
+    font-weight: 800;
+}
+
+@media(max-width: 800px){
+    .tesmonials .tes-row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .tesmonials .tes-row .tes-imgs{
+        gap: .5rem;
+        padding: .5rem;
+    }
+    .tesmonials .tes-row .tes-imgs h4{
+        margin: .9rem 0;
+    }
+}
+
+
+
+
+.cta{
+    text-align: center;
+    margin: 5rem 2rem;
+    width: 80%;
+    margin: 5rem auto;
+    margin-top: 5rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(edimgs/edf-abt.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: .7rem;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+
+
+footer{
+    padding: 0 15rem;
+    text-align: center;
+    margin-top: 7rem ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer.fta .fta-ct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5rem;
+}
+footer p{
+    margin: 1.6rem 0;
+}
+footer .f-cons .ik{
+    margin: 0 1rem; cursor: pointer;
+}
+
+@media(max-width: 800px){
+    footer{
+        padding: 0 .9rem;
+    }
+}
+
+
+
+
+/*-------------ABOUT US-----------------*/
+
+.sub-header{
+    width: 100vw;
+    min-height: 50vh;
+    background-image: linear-gradient(rgba(4,9,30, .7), rgba(4,9,30, .7)), url(edimgs/edf-cert.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.sub-header h1{
+    color: #fff;
+    margin-top: 3rem;
+    font-weight: 800;
+}
+
+ .row{
+    width: 80%;
+    margin: 5rem auto;
+    display: flex;
+}
+ .row .col{
+    width : 48vw;
+    padding: 1rem 1rem;
+}
+.row .col img{
+    width: 100%;
+}
+.row p{
+    margin: 1rem 0;
+}
+.red-btn{
+    color: #f44336;
+    border: .1rem solid #f44336;
+}
+.red-btn:hover {
+    color: #fff;
+}
+.row h1{
+    font-weight: 700;
+}
+
+@media(max-width: 800Px){
+    body, html, .sub-header, section{
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+    }
+    .row{
+        flex-direction: column;
+        margin: .7rem;
+        margin-top: 5rem;
+        align-items: center;
+        justify-content: center;
+        margin: 5rem auto;
+        width: 90%;
+    }
+    .row .col{
+        margin: 1rem 0;
+        width: 100%;
+    }
+}
+
+
+
+/*-------------BLOG-----------------*/
+
+.row .bg-lft{
+    width: 60vw;
+}
+.bg-ct .row{
+    gap: 2.5rem;
+}
+.row .bg-lft img{
+    width: 100%;
+}
+.bg-lft h2{
+    margin: 2rem 0;
+    color: #222;
+}
+.bg-lft p{
+    color: #999;
+}
+
+.row .bg-rt{
+    width: 50%;
+    padding: .5rem 0;
+}
+.row .bg-rt div{
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.bg-rt h4{
+    width: 100%;
+    text-align: center;
+    background: #f44336;
+    padding: .5rem 1rem;
+    color: #fff;
+}
+.cmt-box{
+    border: .2rem solid #f0f0f0;
+    margin: 3rem 0;
+    padding: 1rem;
+    text-align: left;
+}
+.cmt-box .cmt-form{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.cmt-box .cmt-form input, .cmt-box .cmt-form textarea{
+    margin: .8rem 0;
+    background: #f0f0f0;
+    box-sizing: border-box;
+    border: 0;
+    padding: .5rem ;
+    font-size: .7rem;
+}
+.cmt-box .cmt-form button{
+    width: 30%;
+    font-size: .5rem;
+    font-weight: 700;
+}
+
+@media(max-width:800px){
+    .cmt-box .cmt-form button{
+        width: 50%;
+        padding: .3rem .4rem;
+    }
+    .row .bg-rt {
+        width: 60vw;
+        background: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+/*-------------CONTACT US-----------------*/
+
+.map{
+    width: 80%;
+    margin: 5rem auto;
+}
+.map iframe{
+    width: 100%;
+}
+.inf{
+    justify-content: space-between;
+}
+.row .inf .sng-inf{
+    display: flex;
+    gap: 1rem;
+}
+.row .inf .sng-inf img{
+    width: 1.5rem; height: 1.5rem; margin-top:1rem ;
+}
+.row .sng-inf .smt{
+    font-size: .7rem;
+}
+.row{
+    justify-content: space-between;
+}
+.fom{
+    width: 50%; 
+}
+.row .fom input, .row .fom textarea{
+    width: 100%;
+    border: .1rem solid #999;
+    margin: .4rem 0;
+    border-radius: .2rem;
+    padding: .5rem .8rem;
+}
+
+@media(max-width:800px){
+    .fom{
+        display: flex; flex-direction: column;
+    }
+    .row {
+        margin: 0 auto;
+    }
+    .row .inf {
+        margin-bottom: 3rem;
+    }
+    .row .fom{
+        width: 60vw;
+    }
+}
+
+
+
+
